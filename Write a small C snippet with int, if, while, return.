@@ -1,0 +1,26 @@
+#include <stdio.h>
+int digit(int num)
+{
+    int sum=0;
+    if(num<10)
+    return num;
+    else
+    {
+        while(num>0)
+        {
+            sum=sum+(num%10);
+            num=num/10;
+        }
+        return sum;
+            
+}
+}
+
+int main() {
+    int num;
+   printf("Enter the number to be checked :");
+   scanf("%d",&num);
+    int r=digit(num);
+    printf("%d",r);
+    return 0;
+}
