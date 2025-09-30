@@ -1,0 +1,117 @@
+#include <stdio.h>
+
+void first()
+{
+     int num;
+    printf("Enter the size of the array");
+    scanf("%d",&num);
+    int A[num];
+    for(int i=0;i<num;++i)
+    {
+        printf("The num at %d",i+1);
+        scanf("%d",&A[i]);
+    }
+    for(int i=0;i<num-1;i++)
+    {
+        for(int j=0;j<num-i-1;++j)
+        {
+        if(A[j]>A[j+1])
+        {
+            int temp=A[j];
+            A[j]=A[j+1];
+            A[j+1]=temp;
+        }
+        }
+    
+        }
+        printf("\nThe second largest numbers is %d",A[num-2]);
+        printf("\nThe second smallest number is %d",A[1]);
+}
+
+void second()
+{
+      int num;
+    printf("\nEnter the size of the array");
+    scanf("%d",&num);
+    int A[num];
+    for(int i=0;i<num;++i)
+    {
+        printf("The num at %d",i+1);
+        scanf("%d",&A[i]);
+    }
+    int d=0;
+    for (int a=0;a<num;a++)
+    {
+        int c=0;
+    for(int j=2;j< A[a]/2;++j)
+    {
+    if( A[a]%j==0)
+    c=c+1;
+    }
+    if(c==0)
+    ++d;
+    
+    }
+    printf("\nThe array has %d prime number",d);
+}
+
+void third()
+{
+     int num;
+    printf("\nEnter the size of the array");
+    scanf("%d",&num);
+    int A[num];
+    for(int i=0;i<num;++i)
+    {
+        printf("\nThe num at %d",i+1);
+        scanf("%d",&A[i]);
+    }
+    for(int i=0;i<num-1;i++)
+    {
+        for(int j=0;j<num-i-1;++j)
+        {
+        if(A[j]>A[j+1])
+        {
+            int temp=A[j];
+            A[j]=A[j+1];
+            A[j+1]=temp;
+        }
+        }
+    }
+    for (int z=0;z<num;++z)
+    {
+        printf("\n%d",A[z]);
+    }
+        
+}
+void fourth()
+{
+    int num;
+    printf("\nEnter the size of the array");
+    scanf("%d",&num);
+    int A[num];
+    for(int i=0;i<num;++i)
+    {
+        printf("\nThe num at %d",i+1);
+        scanf("%d",&A[i]);
+    }
+    int c=0;
+    for(int j=0;j<num/2;++j)
+    {
+        if(A[j]==A[num-1-j])
+        ++c;
+    }
+    if(c==num/2)
+    printf("\nIt is palindrome ");
+    else
+    printf("\nIt is not palindome");
+}
+int main()
+{
+    first();
+    second();
+    third();
+    fourth();
+    return 0;
+}
+    
