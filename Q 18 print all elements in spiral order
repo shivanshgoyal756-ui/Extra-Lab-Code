@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+ int n;
+ printf("Enter the row or column number");
+ scanf("%d",&n);
+ int A[n][n];
+ for(int i=0;i<n;++i)
+ {
+     for(int j=0;j<n;++j)
+     {
+         printf("\nEnter the number");
+         scanf("%d",&A[i][j]);
+     }
+ }
+ int c=0;
+ for(int i=0;i<n;++i)
+ {
+     for(int j=0;j<n;++j)
+     {
+         if(i%2==0)
+         {
+             printf("%d",A[i][c]);
+         ++c;
+         }
+         else
+         {
+             --c;
+             printf("%d",A[i][c]);
+             
+         }
+        
+     }
+ }
+ return 0;
+}
